@@ -1,0 +1,58 @@
+@import "_variables.scss";
+
+.button,
+.button:link,
+.button:visited {
+  text-transform: uppercase;
+  text-decoration: none; /*work on*/
+  /*add hover color change */
+  padding: 1.5rem 4rem;
+  background-color: color(red);
+  margin: 1rem auto;
+  font-size: 2rem;
+  border-radius: 10rem; /*rounds the border edges, can change*/
+  transition: all 0.3s; /*timing of transition to hover*/
+  position: relative;
+}
+
+.button-red {
+  background-color: color(red);
+  color: #fff;
+}
+
+/*hover starts below*/
+
+.button-red::after {
+  background-color: color(red);
+  color: #fff;
+}
+
+.button:hover {
+  /*transform: scale(1.25);     scale up by 1.25*/
+  transform: translateY(-2px); /*move up by 2px*/
+  box-shadow: 0 10px 0.5rem rgba(color(black), 0.6); /*increase 0.6 to darken shadow*/
+}
+
+.button::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%; /*100%= same width+height of base class "button"*/
+  border-radius: 10rem;
+  position: absolute; /*creates afterimage */
+  top: 0;
+  left: 0;
+  z-index: -1; /*order of z axis*/
+  transition: all 0.3s;
+}
+
+.buttom:hover::after {
+  transform: scaleX(1.5) scaleY(1.6); /*transform cannot be used twice so use in same line*/
+  opacity: 0;
+}
+
+.button:active {
+  transform: translateY(-1px);
+  transform: scaleX(1.5) scaleY(1.6);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}

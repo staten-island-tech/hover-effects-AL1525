@@ -1,1 +1,161 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+html,
+body {
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.button,
+.button:link,
+.button:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  /*work on*/
+  /*add hover color change */
+  padding: 1.5rem 4rem;
+  background-color: #ff5722;
+  margin: 1rem auto;
+  font-size: 2rem;
+  border-radius: 10rem;
+  /*rounds the border edges, can change*/
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  /*timing of transition to hover*/
+  position: relative;
+}
+
+.button-red {
+  background-color: #ff5722;
+  color: #fff;
+}
+
+/*hover starts below*/
+.button-red::after {
+  background-color: #ff5722;
+  color: #fff;
+}
+
+.button:hover {
+  /*transform: scale(1.25);     scale up by 1.25*/
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  /*move up by 2px*/
+  -webkit-box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.6);
+          box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.6);
+  /*increase 0.6 to darken shadow*/
+}
+
+.button::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  /*100%= same width+height of base class "button"*/
+  border-radius: 10rem;
+  position: absolute;
+  /*creates afterimage */
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /*order of z axis*/
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.buttom:hover::after {
+  -webkit-transform: scaleX(1.5) scaleY(1.6);
+          transform: scaleX(1.5) scaleY(1.6);
+  /*transform cannot be used twice so use in same line*/
+  opacity: 0;
+}
+
+.button:active {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-transform: scaleX(1.5) scaleY(1.6);
+          transform: scaleX(1.5) scaleY(1.6);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+html,
+body {
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.forget {
+  height: 20rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 50%;
+}
+
+.forget:hover {
+  border-radius: 0;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+html,
+body {
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.text-effect {
+  background-image: url("./media/blossoms.jpg");
+  background-position: center;
+  color: transparent;
+  font-size: 8rem;
+  -webkit-background-clip: text;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  /*remember to add*/
+}
+
+.text-effect:hover {
+  -webkit-transform: skewY(-10deg);
+          transform: skewY(-10deg);
+  letter-spacing: 3rem;
+}
+
+.container {
+  width: 80vh;
+  margin: 2rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 1rem;
+  font-size: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
