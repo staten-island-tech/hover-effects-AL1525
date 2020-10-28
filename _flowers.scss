@@ -1,0 +1,35 @@
+@import "_variables.scss";
+
+.flowers {
+  width: 60rem;
+  height: 40rem;
+  background-color: green;
+}
+
+.bouquet {
+  margin: 3rem;
+  position: relative;
+}
+
+.flower {
+  position: absolute;
+  height: 20rem;
+  box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.4);
+
+  transition: all 0.3s;
+}
+
+.sentimental {
+  top: 13rem;
+  left: 22.5%;
+}
+
+.paradise {
+  top: 2rem;
+  left: 5%;
+}
+
+.lily {
+  top: -1rem;
+  left: 40%;
+}
