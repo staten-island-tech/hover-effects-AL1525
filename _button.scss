@@ -7,7 +7,7 @@
   text-decoration: none; /*work on*/
   /*add hover color change */
   padding: 1.5rem 4rem;
-  background-color: color(red);
+  background-color: color(green);
   margin: 1rem auto;
   font-size: 2rem;
   border-radius: 10rem; /*rounds the border edges, can change*/
@@ -16,14 +16,14 @@
 }
 
 .button-red {
-  background-color: color(red);
+  background-color: color(green);
   color: #fff;
 }
 
 /*hover starts below*/
 
 .button-red::after {
-  background-color: color(red);
+  background-color: color(green);
   color: #fff;
 }
 
