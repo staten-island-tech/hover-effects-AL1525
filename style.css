@@ -16,77 +16,134 @@ body {
           box-sizing: border-box;
 }
 
-.button,
+/*.button,
 .button:link,
 .button:visited {
   text-transform: uppercase;
-  text-decoration: none;
-  /*work on*/
-  /*add hover color change */
-  padding: 1.5rem 4rem;
-  background-color: rgba(20, 255, 90, 0.692);
+  text-decoration: none; /*work on*/
+/*add hover color change */
+/*padding: 1.5rem 4rem;
+  background-color: color(green);
   margin: 1rem auto;
   font-size: 2rem;
-  border-radius: 10rem;
-  /*rounds the border edges, can change*/
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  /*timing of transition to hover*/
-  position: relative;
+  border-radius: 10rem; /*rounds the border edges, can change*/
+/*transition: all 0.3s; /*timing of transition to hover*/
+/*position: relative;
 }
 
 .button-red {
-  background-color: rgba(20, 255, 90, 0.692);
+  background-color: color(green);
   color: #fff;
 }
 
 /*hover starts below*/
-.button-red::after {
-  background-color: rgba(20, 255, 90, 0.692);
+/*.button-red::after {
+  background-color: color(green);
   color: #fff;
 }
 
 .button:hover {
   /*transform: scale(1.25);     scale up by 1.25*/
-  -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
-  /*move up by 2px*/
-  -webkit-box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.6);
-          box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.6);
-  /*increase 0.6 to darken shadow*/
+/*transform: translateY(-2px); /*move up by 2px*/
+/*box-shadow: 0 10px 0.5rem rgba(color(black), 0.6);   increase 0.6 to darken shadow
 }
 
 .button::after {
   content: "";
   display: inline-block;
   height: 100%;
-  width: 100%;
-  /*100%= same width+height of base class "button"*/
-  border-radius: 10rem;
-  position: absolute;
-  /*creates afterimage */
-  top: 0;
+  width: 100%; /*100%= same width+height of base class "button"*/
+/*border-radius: 10rem;
+  position: absolute; /*creates afterimage */
+/*top: 0;
   left: 0;
-  z-index: -1;
-  /*order of z axis*/
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  z-index: -1; /*order of z axis*/
+/*transition: all 0.3s;
 }
 
 .buttom:hover::after {
-  -webkit-transform: scaleX(1.5) scaleY(1.6);
-          transform: scaleX(1.5) scaleY(1.6);
-  /*transform cannot be used twice so use in same line*/
-  opacity: 0;
+  transform: scaleX(1.5) scaleY(1.6); /*transform cannot be used twice so use in same line*/
+/*opacity: 0;
 }
 
 .button:active {
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
-  -webkit-transform: scaleX(1.5) scaleY(1.6);
-          transform: scaleX(1.5) scaleY(1.6);
-  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+  transform: scaleX(1.5) scaleY(1.6);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}*/
+html,
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: 100%;
+  background-color: green;
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: "Source Code Pro", monospace;
+}
+
+.button:hover {
+  letter-spacing: 5px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
+.button:active {
+  letter-spacing: 5px;
+}
+
+.button::after {
+  border: 1px solid rgba(255, 255, 255, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  width: 0;
+}
+
+.button:hover:after,
+.button:hover:before {
+  border-color: white;
+  -webkit-transition: width 1s;
+  transition: width 1s;
+  width: 70%;
+  text-decoration: none;
+}
+
+.button:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 70%;
+}
+
+.button-body {
+  background-color: green;
+  height: 4.5rem;
+  width: 20rem;
+  margin: 3rem 3rem 3rem 3rem;
 }
 
 html,
