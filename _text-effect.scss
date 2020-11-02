@@ -3,15 +3,21 @@
 .text-effect {
   background-image: url("./media/blossoms.jpg");
   background-position: center;
-  padding: 3rem 3 rem 3rem 3rem;
-  color: transparent;
-  font-size: 8rem;
+  padding: 3rem 3rem 3rem 3rem;
+  margin: 2rem;
+  color: white;
   font-family: $fontTitle;
-  -webkit-background-clip: text;
-  transition: all 0.5s; /*remember to add*/
+  font-size: 7rem;
+  border-radius: 20%;
+  transition: all 1.5s; /*remember to add*/
 }
 
 .text-effect:hover {
-  letter-spacing: 1.5rem;
-  font-weight: 900;
+  letter-spacing: 1rem;
+  width: 40rem;
+  font-weight: bold;
+  color: transparent;
+  font-size: 7rem;
+  font-family: $fontTitle;
+  -webkit-background-clip: text;
 }

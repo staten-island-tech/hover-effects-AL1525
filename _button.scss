@@ -89,8 +89,7 @@ body {
 }
 
 .button::after {
-  border: 1px solid rgba(#fff, 0);
-  bottom: 0px;
+  border-bottom: 1px solid rgba(#fff, 0);
   content: " ";
   display: block;
   margin: 0 auto;

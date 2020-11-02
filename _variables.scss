@@ -12,10 +12,11 @@ $fontButton: ("Source Code Pro", monospace);
 
 $colors: (
   white: #fff,
-  orange: rgb(255, 196, 0),
+  orange: rgb(255, 165, 0),
   black: #000,
-  green: rgba(20, 255, 90, 0.692),
-  blue: rgb(79, 126, 173),
+  green: rgb(0, 128, 0),
+  blue: rgb(0, 0, 255),
+  lime: rgb(0, 255, 0),
 );
 
 @function color($color-name) {
